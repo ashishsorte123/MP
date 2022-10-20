@@ -37,13 +37,13 @@ def model_predict(img_path, model):
     preds = model.predict(x)
     preds=np.argmax(preds, axis=1)
     if preds == 0:
-        preds="G"
+        preds = "Glioma Tumor → Glioma is a type of tumor that occurs in the brain and spinal cord. Gliomas begin in the gluey supportive cells (glial cells) that surround nerve cells and help them function. Three types of glial cells can produce tumors."
     elif preds==1:
-        preds="M"
+        preds = "Meningioma Tumor → A meningioma is a tumor that forms in your meninges, which are the layers of tissue that cover your brain and spinal cord. They're usually not cancerous (benign), but can sometimes be cancerous (malignant). Meningiomas are treatable."
     elif preds == 2:
-        preds="N"
+        preds = "No Tumor → Be Happy, There is was No Sign of Any Tumor in your MRI"
     else:
-        preds="P"    
+        preds = "Pituitary Tumor → A pituitary tumor is a tumor that forms in the pituitary gland near the brain that can cause changes in hormone levels in the body. This illustration shows a smaller tumor (microadenoma). Pituitary tumors are abnormal growths that develop in your pituitary gland."
     return preds
 
 # (training = g --> 1 to 3, m --> 2 to 3, n --> 1 to 10, p --> 5 to 10)
@@ -69,6 +69,7 @@ def upload():
         # Make prediction
         preds = model_predict(file_path, model)
         result=preds
+        print(result)
         return result
     return None
 
