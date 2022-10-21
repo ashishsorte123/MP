@@ -1,17 +1,13 @@
 from __future__ import division, print_function
-import sys
 import os
-import glob
-import re
 import numpy as np
 
 # Keras
-from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # Flask utils
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 #from gevent.pywsgi import WSGIServer
 
