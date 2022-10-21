@@ -1,4 +1,0 @@
-uploads/*
-model_resnet50.h5
-model_vgg19.h5
-!uploads/.gitkeep
