@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH ='model_mobilenet.h5'
+MODEL_PATH ='model_vgg19.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
@@ -70,5 +70,5 @@ def upload():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run()
+    app.run(debug=True)
+    # app.run()
