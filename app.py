@@ -42,7 +42,7 @@ def model_predict(img_path, model):
     return preds
 
 # (training = g --> 1 to 3, m --> 2 to 3, n --> 1 to 10, p --> 5 to 10)
-
+# (training = g --> 530, m --> m3 242, n --> 162, p --> 782 )
 @app.route('/', methods=['GET'])
 def index():
     # Main page
