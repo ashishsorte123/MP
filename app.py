@@ -45,11 +45,23 @@ def model_predict(img_path, model):
 
 # (training = g --> 1 to 3, m --> 2 to 3, n --> 1 to 10, p --> 5 to 10)
 # (training = g --> 530, m --> m3 242, n --> 162, p --> 782 )
-@app.route('/', methods=['GET'])
-def index():
-    # Main page
-    return render_template('index.html')
+@app.route('/')
 
+@app.route('/first')
+def first():
+    return render_template('first.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/chart')
+def chart():
+    return render_template('chart.html')
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
