@@ -3,36 +3,53 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+      
         <title>Brain Tumor Detection using Deep Learning</title>
-        <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet">
-
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+          
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
         <link href="../static/vendor/animate.css/animate.min.css" rel="stylesheet">
         <link href="../static/vendor/aos/aos.css" rel="stylesheet">
-        <link href="../static/vendor/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+        <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
         <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
         <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
         <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+      
+        <!-- Template Main CSS File -->
         <link href="../static/style.css" rel="stylesheet">
     </head>
-
+      
     <body>
-        <header id="header" class="fixed-top d-flex align-items-center">
+        <header id="header" class="fixed-top d-flex align-items-cente">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
                 <h1 class="col-lg-8">
-                    <a href="">
-                        <span>Brain Tumor Detection</span>
+                    <a href="index.html">
+                        <span>
+                            Brain Tumor Detection
+                        </span>
                     </a>
                 </h1>
+
+                <a href="index.html" class="logo me-auto me-lg-0">
+                    <img src="assets/img/logo.png" alt="" class="img-fluid">
+                </a>
+
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
                         <li>
-                            <a class="nav-link scrollto" href="{{url_for('first')}}">Home</a>
+                            <a class="nav-link scrollto " href="{{ url_for('first')}}">
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <a class="nav-link scrollto active" href="{{url_for('login')}}">Login</a>
+                            <a class="nav-link scrollto active" href="{{ url_for('login')}}">
+                                Login
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -44,7 +61,9 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <h1>
-                            <span>Brain Tumor Detection using Deep Learning</span>
+                            <span>
+                                Brain Tumor Detection using Deep Learning
+                            </span>
                         </h1>
                     </div>
                 </div>
@@ -55,7 +74,7 @@
             <div class="container" data-aos="fade-up">
                 <head>
                     <script>
-                        addEventListener("load", function () {
+                        addEventListener("load", function() {
                             setTimeout(hideURLbar, 0);
                         }, false);
 
@@ -63,17 +82,16 @@
                             window.scrollTo(0, 1);
                         }
 
-                        function login() {
-                            var username = document.getElementById("username").value;
-                            var password = document.getElementById("password").value;
-
-                            if(username == "admin" && password == "admin"){
-                                alert("Login Succesfull !!!");
+                        function login(){
+                            var uname = document.getElementById("uname").value;
+                            var pwd = document.getElementById("pwd").value;
+                            if(uname == "admin" && pwd == "admin") {
+                                alert("Login Success!");
                                 window.location = "{{url_for('index')}}";
                                 return false;
                             }
                             else {
-                                alert("Invalid Credentials !!!")
+                                alert("Invalid Credentials!");
                             }
                         }
                     </script>
@@ -90,37 +108,39 @@
                                 </p>
                             </center>
                         </div>
-                        
+
                         <div class="row">
-                            <div class="col-md-6 col-lg-4" style="margin-left:380px">
+                            <div class="col-md-6 col-lg-4" style="margin-left:440px">
                                 <div class="control-group">
                                     <label class="control-label" for="username">
                                         <b>
                                             Username
                                         </b>
                                     </label>
+
                                     <div class="controls">
-                                        <input type="text" id="username" name="username" placeholder="" class="form-control">
+                                        <input type="text" id="uname" name="uname" placeholder="" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
-                                    <br>       
+                                    </br>
                                     <label class="control-label" for="password">
                                         <b>
                                             Password
                                         </b>
                                     </label>
+
                                     <div class="controls">
-                                        <input type="password" name="password" placeholder="" class="form-control">
+                                        <input type="password" id="pwd" name="pwd" placeholder="" class="form-control">
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4" style="margin-left: 150px">        
+                                <div class="col-md-6 col-lg-4" style="margin-left:-150px">
                                     <div class="control-group">
                                         <br>
                                         <div class="controls">
-                                            <input type="button" class="btn btn-success" value="Login" style="margin-left: 280px" onclick="login()">
+                                            <input type="button" class="btn btn-success" value="Login" style="margin-left: 320px" onclick="login()">
                                         </div>
                                     </div>
                                 </div>
@@ -137,20 +157,22 @@
                 <div class="credits"></div>
             </div>
         </footer>
-
+      
         <div id="preloader"></div>
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
             <i class="bi bi-arrow-up-short"></i>
         </a>
 
+        <!-- Vendor JS Files -->
         <script src="../static/vendor/aos/aos.js"></script>
         <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
         <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
         <script src="../static/vendor/php-email-form/validate.js"></script>
         <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
-
-        <script src="../static/js/main.js"></script>
+      
+        <!-- Template Main JS File -->
+        <script src="../static/js/main.js"></script>      
     </body>
 </html>
