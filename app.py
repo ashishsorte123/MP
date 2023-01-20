@@ -14,9 +14,9 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH ='model_mobilenet.h5'
+# MODEL_PATH ='model_mobilenet.h5'
 # MODEL_PATH ='model_resnet50.h5'
-# MODEL_PATH ='model_vgg19.h5'
+MODEL_PATH ='model_vgg19.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
@@ -45,7 +45,7 @@ def model_predict(img_path, model):
 
 # (training = g --> 1 to 3, m --> 2 to 3, n --> 1 to 10, p --> 5 to 10)
 # (training = g --> 530, m --> m3 242, n --> 162, p --> 782 )
-@app.route('/')
+@app.route('/', methods=['GET'])
 
 @app.route('/first')
 def first():
@@ -55,13 +55,11 @@ def first():
 def login():
     return render_template('login.html')
 
-@app.route('/chart')
-def chart():
-    return render_template('chart.html')
-
 @app.route('/index')
 def index():
+    # Main page
     return render_template('index.html')
+
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
