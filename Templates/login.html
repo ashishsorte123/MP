@@ -25,11 +25,11 @@
         <link href="../static/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="myFunction()">
         <header id="header" class="fixed-top d-flex align-items-center">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
                 <h1 class="col-lg-8">
-                    <a href="index.html">
+                    <a href="{{ url_for('first')}}">
                         <span>
                             Brain Tumor Detection
                         </span>
@@ -155,7 +155,16 @@
             </div>
         </footer>
 
-        <div id="preloader" style="display: none"></div>
+        <!-- <div id="preloader" style="display: none"></div> -->
+
+        <div id="preloader"></div>
+
+        <script>
+            var preloader = document.getElementById('preloader')
+            function myFunction() {
+                preloader.style.display = 'none'
+            }
+        </script>
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
             <i class="bi bi-arrow-up-short"></i>

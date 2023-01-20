@@ -55,11 +55,14 @@ def first():
 def login():
     return render_template('login.html')
 
+@app.route('/chart')
+def chart():
+    return render_template('chart.html')
+
 @app.route('/index')
 def index():
     # Main page
     return render_template('index.html')
-
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
