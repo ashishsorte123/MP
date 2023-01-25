@@ -26,6 +26,10 @@
     </head>
 
     <body onload="myFunction()">
+        <div id="topbar" class="d-flex align-items-center fixed-top">
+            <div class="container d-flex justify-content-center justify-content-md-between"></div>
+        </div>
+
         <header id="header" class="fixed-top d-flex align-items-center">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
                 <h1 class="col-lg-8">
@@ -57,17 +61,18 @@
             <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h1>
-                            <span>
-                                Brain Tumor Detection using Deep Learning
-                            </span>
-                        </h1>
+                        <h1>Brain Tumor Detection using Deep Learning</h1>
+                        <div class="btns">
+                            <a href="#login" class="btn-menu animated fadeInUp pre-scrollable">
+                                Login
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="book-a-table" class="book-a-table">
+        <section id="login" class="login">
             <div class="container" data-aos="fade-up">
                 <head>
                     <script>

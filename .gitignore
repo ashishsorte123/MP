@@ -3,3 +3,6 @@ uploads/*
 model_resnet50.h5
 model_vgg19.h5
 model_mobilenet.h5
+model_mobilenet(realtime images).h5
+model_resnet50(real time images).h5
+model_vgg19(real time images).h5
