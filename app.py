@@ -62,6 +62,22 @@ def login():
 def chart():
     return render_template('chart.html')
 
+@app.route('/gioma_tumor')
+def gioma_tumor():
+    return render_template('gioma_tumor.html')
+
+@app.route('/meningioma_tumor')
+def meningioma_tumor():
+    return render_template('meningioma_tumor.html')
+
+@app.route('/no_tumor')
+def no_tumor():
+    return render_template('no_tumor.html')
+
+@app.route('/pituitary_tumor')
+def pituitary_tumor():
+    return render_template('pituitary_tumor.html')
+
 @app.route('/index')
 def index():
     # Main page

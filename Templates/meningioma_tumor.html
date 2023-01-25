@@ -83,23 +83,8 @@
 
                             <ul>
                                 <li>
-                                    <a href="{{ url_for('gioma_tumor')}}">
-                                        Gioma Tumor
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('meningioma_tumor')}}">
-                                        Meningioma Tumor
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('no_tumor')}}">
-                                        No Tumor
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('pituitary_tumor')}}">
-                                        Pituitary Tumor
+                                    <a href="{{ url_for('chart')}}">
+                                        Graph
                                     </a>
                                 </li>
                             </ul>
@@ -130,69 +115,8 @@
 
         <section id="analysis" class="analysis">
             <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <center>
-                        <p>
-                            Observation
-                        </p>
-                    </center>
-                </div>
-
-                <center>
-                    <h1 style="color: black">
-                        Major Classes of Brain Tumor Images Trained
-                    </h1>
-                </center>
-
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript">
-                    google.charts.load("current", {packages:['corechart']});
-                    google.charts.setOnLoadCallback(drawChart);
-                    function drawChart() {
-                        var data = google.visualization.arrayToDataTable([
-                            ["states", "percentage", { role: "style" } ],
-                            ["Glioma tumor", 42, "#00FFFF"],
-                            ["Meningioma tumor", 72, "#DF01A5"],
-                            ["No tumor", 102, "#FF0000"],
-                            ["Pituitary tumor", 74, "color: #FFBF00"]
-                        ]);
-
-                        var view = new google.visualization.DataView(data);
-                        view.setColumns([0, 1,
-                        {
-                            calc: "stringify",
-                            sourceColumn: 1,
-                            type: "string",
-                            role: "annotation" 
-                        }, 2
-                        ]);
-
-                        var options = {
-                            title: "",
-                            width: 600,
-                            height: 400,
-                            bar: {groupWidth: "95%"},
-                            legend: { position: "none" },
-                        };
-                        
-                        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-                        chart.draw(view, options); 
-                    }
-                </script>
-
-                <center>
-                    <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
-                </center>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-
                 <html>
                     <head>
-                        <title></title>
                         <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"></script>
                         <script type = "text/javascript">
                             google.charts.load('current', {packages: ['corechart','line']});  
