@@ -6,6 +6,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
         <title>Brain Tumor Detection using Deep Learning</title>
+
         <meta content="" name="description">
         <meta content="" name="keywords">
 
@@ -30,81 +31,120 @@
             <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
                 <h1 class="col-lg-8">
                     <a href="{{ url_for('index')}}">
-                        <span>
-                            Brain Tumor Detection
-                        </span>
+                        Brain Tumor Detection
                     </a>
-                </h1>
+                </h1> 
                 
-                <nav id="navbar" class="navbar order-last order-lg-0">
+                <nav id="navbar" class="navbar order-last order-lg-0" style="right: 150px">
                     <ul>
                         <li>
-                            <a class="nav-link scrollto" href="{{ url_for('first')}}">
+                            <a class="nav-link scrollto active" href="{{url_for('first')}}">
                                 Home
                             </a>
                         </li>
-
                         <li>
                             <a class="nav-link scrollto" href="{{ url_for('login')}}">
                                 Login
                             </a>
                         </li>
-
+                        <li class="dropdown">
+                            <a href="#">
+                                <span>
+                                    Models
+                                </span>
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                            
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="#">
+                                        <span>
+                                            Mobilenet
+                                        </span>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{url_for('mobilenet1')}}">
+                                                Accuracy Plot
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url_for('mobilenet2')}}">
+                                                Loss Plot
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">
+                                        <span>
+                                            Resnet50
+                                        </span>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{url_for('resnet1')}}">
+                                                Accuracy Plot
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url_for('resnet2')}}">
+                                                Loss Plot
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="">
+                                        <span>
+                                            SVM
+                                        </span>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{url_for('svm1')}}">
+                                                Accuracy Plot
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url_for('svm2')}}">
+                                                Loss Plot
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="">
+                                        <span>
+                                            VGG19
+                                        </span>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{url_for('vgg1')}}">
+                                                Accuracy Plot
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url_for('vgg2')}}">
+                                                Loss Plot
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         <li>
                             <a class="nav-link scrollto" href="{{ url_for('index')}}">
                                 Upload
                             </a>
                         </li>
-
-                        <li class="dropdown">
-                            <a href="">
-                                <span>
-                                    Test prediction
-                                </span>
-                                <i class="bi bi-chevron-right"></i>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="{{ url_for('index')}}">
-                                        Test
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="#">
-                                <span>
-                                    Analysis
-                                </span>
-                                <i class="bi bi-chevron-right"></i>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="{{ url_for('gioma_tumor')}}">
-                                        Gioma Tumor
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('meningioma_tumor')}}">
-                                        Meningioma Tumor
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('no_tumor')}}">
-                                        No Tumor
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('pituitary_tumor')}}">
-                                        Pituitary Tumor
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>                  
-                    </ul>               
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
             </div>
         </header>
@@ -262,7 +302,7 @@
             }
         </script>
 
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
             <i class="bi bi-arrow-up-short"></i>
         </a>
 

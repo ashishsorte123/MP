@@ -17,9 +17,10 @@ app = Flask(__name__)
 # MODEL_PATH ='model_mobilenet.h5'
 # MODEL_PATH ='model_resnet50.h5'
 # MODEL_PATH ='model_vgg19.h5'
-# MODEL_PATH = 'model_mobilenet(realtime images).h5'
+MODEL_PATH = 'model_mobilenet(realtime images).h5'
 # MODEL_PATH = 'model_resnet50(real time images).h5'
-MODEL_PATH = 'model_vgg19(real time images).h5'
+# MODEL_PATH = 'model_vgg19(real time images).h5'
+# MODEL_PATH = 'model_svm(realtime images).h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
@@ -62,21 +63,37 @@ def login():
 def chart():
     return render_template('chart.html')
 
-@app.route('/gioma_tumor')
-def gioma_tumor():
-    return render_template('gioma_tumor.html')
+@app.route('/mobilenet1')
+def mobilenet1():
+    return render_template('mobilenet1.html')
 
-@app.route('/meningioma_tumor')
-def meningioma_tumor():
-    return render_template('meningioma_tumor.html')
+@app.route('/mobilenet2')
+def mobilenet2():
+    return render_template('mobilenet2.html')
 
-@app.route('/no_tumor')
-def no_tumor():
-    return render_template('no_tumor.html')
+@app.route('/resnet1')
+def resnet1():
+    return render_template('resnet1.html')
 
-@app.route('/pituitary_tumor')
-def pituitary_tumor():
-    return render_template('pituitary_tumor.html')
+@app.route('/resnet2')
+def resnet2():
+    return render_template('resnet2.html')
+
+@app.route('/svm1')
+def svm1():
+    return render_template('svm1.html')
+
+@app.route('/svm2')
+def svm2():
+    return render_template('svm2.html')
+
+@app.route('/vgg1')
+def vgg1():
+    return render_template('vgg1.html')
+
+@app.route('/vgg2')
+def vgg2():
+    return render_template('vgg2.html')
 
 @app.route('/index')
 def index():

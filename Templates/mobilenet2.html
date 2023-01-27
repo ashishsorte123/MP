@@ -74,20 +74,11 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#">
+                            <a href="{{ url_for('chart')}}">
                                 <span>
-                                    Analysis
+                                    Back
                                 </span>
-                                <i class="bi bi-chevron-right"></i>
                             </a>
-
-                            <ul>
-                                <li>
-                                    <a href="{{ url_for('chart')}}">
-                                        Graph
-                                    </a>
-                                </li>
-                            </ul>
                         </li>                  
                     </ul>               
                 </nav>
@@ -130,7 +121,7 @@
                             </h1>
                         </center>
                         
-                        <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+                        <div id = "container" style = "width: 750px; height: 400px; margin: 0 auto"></div>
                         
                         <script language = "JavaScript">
                             function drawChart() {
@@ -140,11 +131,23 @@
                                 data.addColumn('number', 'Training_Accuracy');
                                 data.addColumn('number', 'Testing_Accuracy');
                                 data.addRows([
-                                    ['10',  0.75,0.74],
-                                    ['20',  0.82,0.81],
-                                    ['30',  0.85,0.86],
-                                    ['40',  0.92,0.93],
-                                    ['50',  0.98,0.97],
+                                    ['0',  0.10,0.70],
+                                    ['1',  0.40,0.40],
+                                    ['2',  1.00,0.60],
+                                    ['3',  0.80,0.80],
+                                    ['4',  0.80,0.70],
+                                    ['5',  1.00,1.00],
+                                    ['6',  1.00,1.00],
+                                    ['7',  1.00,1.00],
+                                    ['8',  1.00,1.00],
+                                    ['9',  1.00,1.00],
+                                    ['10',  1.00,0.74],
+                                    ['20',  1.00,1.00],
+                                    ['30',  1.00,1.00],
+                                    ['39',  1.00,1.00],
+                                    ['40',  0.95,1.00],
+                                    ['41',  1.00,1.00],
+                                    ['50',  1.00,1.00],
                                 ]);
 
                                 // Set chart options
@@ -155,7 +158,7 @@
                                 vAxis: {
                                     title: 'Accuracy'
                                 },   
-                                    'width':550,
+                                    'width':750,
                                     'height':400	  
                                 };
 
@@ -186,7 +189,7 @@
             }
         </script>
 
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
             <i class="bi bi-arrow-up-short"></i>
         </a>
 
