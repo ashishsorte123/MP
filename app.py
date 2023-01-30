@@ -98,6 +98,30 @@ def vgg1():
 def vgg2():
     return render_template('vgg2.html')
 
+@app.route('/inception1')
+def inception1():
+    return render_template('inception1.html')
+
+@app.route('/inception2')
+def inception2():
+    return render_template('inception2.html')
+
+@app.route('/xception1')
+def xception1():
+    return render_template('xception1.html')
+
+@app.route('/xception2')
+def xception2():
+    return render_template('xception2.html')
+
+@app.route('/resv21')
+def resv21():
+    return render_template('resv21.html')
+
+@app.route('/resv22')
+def resv22():
+    return render_template('resv22.html')
+
 @app.route('/index')
 def index():
     # Main page
