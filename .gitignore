@@ -8,3 +8,6 @@ model_resnet50(real time images).h5
 model_vgg19(real time images).h5
 model_svm.h5
 model_svm(realtime images).h5
+model_inceptionv3(realtime images).h5
+model_resnetv2(realtime images).h5
+model_xception(realtime images).h5
