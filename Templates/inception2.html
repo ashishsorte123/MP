@@ -29,7 +29,7 @@
         <header id="header" class="fixed-top d-flex align-items-cente">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
                 <h1 class="col-lg-8">
-                    <a href="{{ url_for('index')}}">
+                    <a href="{{ url_for('chart')}}">
                         <span>
                             Brain Tumor Detection
                         </span>
@@ -117,11 +117,11 @@
                     <body>
                         <center>
                             <h1 style="color: black">
-                                Accuracy Plot
+                                Loss Plot
                             </h1>
                         </center>
                         
-                        <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+                        <div id = "container" style = "width: 750px; height: 400px; margin: 0 auto"></div>
                         
                         <script language = "JavaScript">
                             function drawChart() {
@@ -131,11 +131,23 @@
                                 data.addColumn('number', 'Training_Accuracy');
                                 data.addColumn('number', 'Testing_Accuracy');
                                 data.addRows([
-                                    ['10',  0.75,0.74],
-                                    ['20',  0.82,0.81],
-                                    ['30',  0.85,0.86],
-                                    ['40',  0.92,0.93],
-                                    ['50',  0.98,0.97],
+                                    ['0',  2.10,6.20],
+                                    ['1',  6.20,10.70],
+                                    ['2',  11.00,9.00],
+                                    ['3',  9.20,7.00],
+                                    ['4',  5.00,3.50],
+                                    ['5',  4.00,3.20],
+                                    ['6',  3.70,2.00],
+                                    ['7',  1.00,0.50],
+                                    ['8',  0.80,0.30],
+                                    ['9',  0.30,0.10],
+                                    ['10',  0.10,0.10],
+                                    ['20',  0.00,0.05],
+                                    ['21',  1.00,0.05],
+                                    ['22',  0.00,0.05],
+                                    ['30',  0.00,0.04],
+                                    ['40',  0.00,0.01],
+                                    ['50',  0.00,0.00],
                                 ]);
 
                                 // Set chart options
@@ -146,7 +158,7 @@
                                 vAxis: {
                                     title: 'Accuracy'
                                 },   
-                                    'width':550,
+                                    'width':750,
                                     'height':400	  
                                 };
 
