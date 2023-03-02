@@ -22,8 +22,8 @@ app = Flask(__name__)
 # MODEL_PATH = 'model_vgg19(real time images).h5'
 # MODEL_PATH = 'model_svm(realtime images).h5'
 # MODEL_PATH = 'model_xception(realtime images).h5'
-# MODEL_PATH = 'model_inceptionv3(realtime images).h5'
-MODEL_PATH = 'model_resnetv2(realtime images).h5'
+MODEL_PATH = 'model_inceptionv3(realtime images).h5'
+# MODEL_PATH = 'model_resnetv2(realtime images).h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
