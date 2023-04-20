@@ -91,7 +91,7 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            if(uname == "admin" && pwd == "admin"){
+            if(username == "admin" && password == "admin"){
               alert("Login Success!");
               window.location = "{{url_for('index')}}";
               return false;
@@ -107,67 +107,57 @@
   </section>
   
  <body id="page-top">
-
-   
- 
-
-  <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
- 
-      <br>
-	  <br>
-      <!-- Portfolio Section Heading -->
-       
-      <!-- Icon Divider -->
-    
- <div class="section-title">
-           
-         <center> <p>Login</p></center>
-        </div>
-      <!-- Portfolio Grid Items -->
-      <div class="row">
+    <br>
+    <br>
 
-        <!-- Portfolio Item 1 -->
-        <div class="col-md-6 col-lg-4" style="margin-left:380px">
-		 <div class="control-group">
-			      <!-- Username -->
-				 
-			      <label class="control-label"   for="username"><b>Username</b></label>
-			      <div class="controls">
-			        <input type="text" id="uname" name="uname" placeholder="" class="form-control">
-			       
+    <div class="section-title">
+      <center>
+        <p>
+          Login
+        </p>
+      </center>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4" style="margin-left:380px">
+        <div class="control-group">
+          <label class="control-label" for="username">
+            <b>
+              Username
+            </b>
+          </label>
+
+          <div class="controls">
+            <input type="text" id="username" name="username" placeholder="" class="form-control">			       
 				  </div>
-			    </div>
+			  </div>
+			  
+        <div class="control-group">
+          <br>
+          <label class="control-label"  for="password">
+            <b>
+              Password
+            </b>
+          </label>
+			    
+          <div class="controls">
+            <input type="password" id="password" name="password" placeholder="" class="form-control">
+				  </div>
+			  </div>
+				
+        <div class="col-md-6 col-lg-4" style="margin-left:-150px">
 			    <div class="control-group">
-			      <!-- Password-->
-				  </br>
-			      <label class="control-label"  for="password"><b>Password</b></label>
-			      <div class="controls">
-			        <input type="password" id="pwd" name="pwd" placeholder="" class="form-control">
-			      
-				  </div>
+            <br>
+            <div class="controls">
+              <input type="button" class="btn btn-success" value="Login" style="margin-left: 280px" onclick="login()">
+				    </div>
 			    </div>
-				 <div class="col-md-6 col-lg-4" style="margin-left:-150px">
-			    <div class="control-group">
-			      <!-- Button -->
-				  <br>
-			      <div class="controls">
-				   
-			        <input type="button" class="btn btn-success" value="Login" style="margin-left: 280px" onclick="login()">
-			      
-				  </div>
-			    </div>
-				 </div>
-  </div>
-  </div>
- 
- 
+				</div>
+      </div>
+    </div>
   </section>
-
-
-  
-
-    </body>
+</body>
 
 
 
