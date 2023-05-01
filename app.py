@@ -41,7 +41,7 @@ def model_predict(img_path, model):
     preds = model.predict(x)
     preds=np.argmax(preds, axis=1)
     if preds == 0:
-        preds = "Glioma Tumor → Glioma is a type of tumor that occurs in the brain and spinal cord. Gliomas begin in the gluey supportive cells (glial cells) that surround nerve cells and help them function. Three types of glial cells can produce tumors."
+        preds = "Glioma Tumor → A glioma tumor is a type of brain tumor that arises from the glial cells in the brain. Gliomas can be benign (non-cancerous) or malignant (cancerous) and can occur anywhere in the brain or spinal cord. Symptoms includes headaches, seizures, changes in vision or hearing., etc."
     elif preds==1:
         preds = "Meningioma Tumor → A meningioma is a tumor that forms in your meninges, which are the layers of tissue that cover your brain and spinal cord. They're usually not cancerous (benign), but can sometimes be cancerous (malignant). Meningiomas are treatable."
     elif preds == 2:
